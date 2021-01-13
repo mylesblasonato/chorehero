@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-course',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourseComponent implements OnInit {
 
-  constructor() { }
+  title: string = "";
+
+  constructor(ap?: AppComponent) {this.title = ap.title;}
 
   ngOnInit(): void {
   }
